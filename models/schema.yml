@@ -193,4 +193,63 @@ models:
         description: sum of all clicks
         tests:
           - not_null
-       
+
+  - name: finance_campaigns_days
+    description: joining the finance days tab and the campaigns days tab
+    columns:
+      - name: date_date
+        description: date of interactions
+        tests:
+          - not_null
+      - name: ads_cost
+        description: sum of ads cost
+        tests:
+          - not_null
+      - name: ads_impression
+        description: sum of ads impressions
+        tests:
+          - not_null
+      - name: ads_click
+        description: sum of all clicks
+        tests:
+          - not_null
+      - name: ads_margin
+        description: op margin - ads cost
+        tests:
+          - not_null 
+      - name: operational_margin
+        description: something
+        tests:
+          - not_null
+      - name: average_basket
+        description: soemthnig
+        tests:
+          - not_null    
+      - name: quantity
+        description: qty
+        tests:
+          - not_null    
+      - name: revenue
+        description: all received
+        tests:
+          - not_null  
+      - name: purchase_cost
+        description: something
+        tests:
+          - not_null      
+      - name: margin
+        description: some
+        tests:
+          - not_null    
+      - name: shipping_fee
+        description: that thing
+        tests:
+          - not_null    
+      - name: logcost
+        description: transport 
+        tests:
+          - not_null    
+      - name: ship_cost
+        description: fare
+        tests:
+          - not_null    
