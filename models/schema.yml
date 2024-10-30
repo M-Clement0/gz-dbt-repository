@@ -61,12 +61,17 @@ sources:
               description: the unique id for every campaign
             - name: camPGN_name
               description: the name of the campigns
+              tests:
+                  - not_null
             - name: ads_cost
               description: the amount paid for ads
             - name: impression
               description: the amount of times people view the site
             - name: click
               description: the amount of clicks people do on the site
+          tests:
+           - unique:
+               column_name: "(date_date || '-' || campaign_key)"
         - name: bing
           identifier: raw_gz_bing
           description: indicatiors from the bing app to calculate traffic & others
@@ -79,12 +84,17 @@ sources:
               description: the unique id for every campaign
             - name: camPGN_name
               description: the name of the campigns
+              tests:
+                  - not_null
             - name: ads_cost
               description: the amount paid for ads
             - name: impression
               description: the amount of times people view the site
             - name: click
-              description: the amount of clicks people do on the site 
+              description: the amount of clicks people do on the site
+          tests:
+           - unique:
+               column_name: "(date_date || '-' || campaign_key)"         
         - name: criteo
           identifier: raw_gz_criteo
           description: indicatiors from the criteo app to calculate traffic & others
@@ -97,12 +107,17 @@ sources:
               description: the unique id for every campaign
             - name: camPGN_name
               description: the name of the campigns
+              tests:
+                - not_null
             - name: ads_cost
               description: the amount paid for ads
             - name: impression
               description: the amount of times people view the site
             - name: click
               description: the amount of clicks people do on the site 
+          tests:
+           - unique:
+               column_name: "(date_date || '-' || campaign_key)"    
         - name: facebook
           identifier: raw_gz_facebook
           description: indicatiors from the facebook app to calculate traffic & others
@@ -115,12 +130,17 @@ sources:
               description: the unique id for every campaign
             - name: camPGN_name
               description: the name of the campigns
+              tests:
+               - not_null
             - name: ads_cost
               description: the amount paid for ads
             - name: impression
               description: the amount of times people view the site
             - name: click
-              description: the amount of clicks people do on the site                    
+              description: the amount of clicks people do on the site
+          tests:
+           - unique:
+               column_name: "(date_date || '-' || campaign_key)"                        
 models:
    - name: int_sales_margin
      description: margin calculation per order
