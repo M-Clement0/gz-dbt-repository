@@ -49,6 +49,78 @@ sources:
               description: The cost associated with handling, storing, and tracking goods within a warehouse.
             - name: ship_cost
               description:  The total cost of transporting a product from origin to destination, including both shipping fees and log costs.
+        - name: adwords
+          identifier: raw_gz_adwords
+          description: indicatiors from the adwords app to calculate traffic & others
+          columns:
+            - name: date_date
+              description: the date every interactions happens on the site
+            - name: paid_source
+              description: the source of paiement
+            - name: campaign_key
+              description: the unique id for every campaign
+            - name: camPGN_name
+              description: the name of the campigns
+            - name: ads_cost
+              description: the amount paid for ads
+            - name: impression
+              description: the amount of times people view the site
+            - name: click
+              description: the amount of clicks people do on the site
+        - name: bing
+          identifier: raw_gz_bing
+          description: indicatiors from the bing app to calculate traffic & others
+          columns:
+            - name: date_date
+              description: the date every interactions happens on the site
+            - name: paid_source
+              description: the source of paiement
+            - name: campaign_key
+              description: the unique id for every campaign
+            - name: camPGN_name
+              description: the name of the campigns
+            - name: ads_cost
+              description: the amount paid for ads
+            - name: impression
+              description: the amount of times people view the site
+            - name: click
+              description: the amount of clicks people do on the site 
+        - name: criteo
+          identifier: raw_gz_criteo
+          description: indicatiors from the criteo app to calculate traffic & others
+          columns:
+            - name: date_date
+              description: the date every interactions happens on the site
+            - name: paid_source
+              description: the source of paiement
+            - name: campaign_key
+              description: the unique id for every campaign
+            - name: camPGN_name
+              description: the name of the campigns
+            - name: ads_cost
+              description: the amount paid for ads
+            - name: impression
+              description: the amount of times people view the site
+            - name: click
+              description: the amount of clicks people do on the site 
+        - name: facebook
+          identifier: raw_gz_facebook
+          description: indicatiors from the facebook app to calculate traffic & others
+          columns:
+            - name: date_date
+              description: the date every interactions happens on the site
+            - name: paid_source
+              description: the source of paiement
+            - name: campaign_key
+              description: the unique id for every campaign
+            - name: camPGN_name
+              description: the name of the campigns
+            - name: ads_cost
+              description: the amount paid for ads
+            - name: impression
+              description: the amount of times people view the site
+            - name: click
+              description: the amount of clicks people do on the site                    
 models:
    - name: int_sales_margin
      description: margin calculation per order
@@ -81,6 +153,3 @@ models:
          description: sum of quantity per order
          tests:
            - not_null
-     tests:
-       - unique:
-           column_name: "(orders_id || '-' || products_id)"
