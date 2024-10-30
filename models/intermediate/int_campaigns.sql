@@ -9,4 +9,5 @@ SELECT *
  UNION ALL
  SELECT *
  FROM {{ ref('stg_raw__facebook') }}
+ ORDER BY date_date DESC
  
