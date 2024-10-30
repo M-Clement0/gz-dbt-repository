@@ -1,5 +1,5 @@
 SELECT
-    date_date   
+    Cast(date_date AS date) AS date_date 
     ,ROUND((operational_margin - ads_cost),2) AS ads_margin
     ,average_basket
     ,operational_margin
