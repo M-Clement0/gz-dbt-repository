@@ -1,5 +1,5 @@
 SELECT
-   extract(month FROM date_date) AS datemonth
+   Date_trunc(date_date,month) AS datemonth
     ,SUM(ads_margin) AS ads_margin
     ,ROUND(SUM(average_basket),2) AS average_basket
     ,SUM(operational_margin) AS operational_margin
